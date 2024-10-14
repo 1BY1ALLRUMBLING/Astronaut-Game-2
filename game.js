@@ -143,8 +143,8 @@ function init() {
     const stars = new THREE.Points(starsGeometry, starsMaterial);
     scene.add(stars);
 
-    // Монстры появляются каждые 5 секунд
-    setInterval(spawnMonster, 5000);
+    // Монстры появляются каждые 3 секунды
+    setInterval(spawnMonster, 3000);
 
     // Анимация
     function animate() {
@@ -369,7 +369,7 @@ function init() {
             shootMonsterBeam(monster);
         }, 3000);
     }
-
+    
     function shootMonsterBeam(monster) {
         const beamGeometry = new THREE.CylinderGeometry(0.05, 0.05, 10, 8);
         const beamMaterial = new THREE.MeshBasicMaterial({ color: 0x0000ff, transparent: true, opacity: 0.7 });
